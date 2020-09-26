@@ -1,0 +1,251 @@
+%	!Mode::"UTF-8"
+%	模板制作：北京大学 化学与分子工程学院 王宇哲
+%	Email：wangyuzhe_ccme@pku.edu.cn
+%	本模板基于北京大学化学与分子工程学院王应泽同学LaTeX模板制作，在此表示感谢！
+%
+%	And death shall have no dominion.
+%	Dead man naked they shall be one
+%	With the man in the wind and the west moon;
+%	When their bones are picked clean and the clean bones gone,
+%	They shall have stars at elbow and foot;
+%	Though they go mad they shall be sane,
+%	Though they sink through the sea they shall rise again;
+%	Though lovers be lost love shall not;
+%	And death shall have no dominion.
+%
+%								by Dylan Thomas
+%
+%	仅限交流使用，不可用作商业用途
+
+%	文档类型及默认字号设置（小四号字）
+\documentclass[12pt]{article}
+
+%	页面设置
+\usepackage{geometry}
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{fontspec}
+\usepackage{setspace}
+
+%	字体设置
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}
+\setCJKsansfont{SimHei}
+
+%	表格设置
+\usepackage{makecell}
+\newcommand{\addcell}[2][4]{\makecell{\zihao{#1}\textsf{#2}}}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+%	设置图注、表注
+\usepackage{caption}
+\usepackage{bicaption}
+\captionsetup{labelsep=quad, font={small, bf}, skip=2pt}
+\DeclareCaptionOption{english}[]{
+    \renewcommand\figurename{Fig.}
+    \renewcommand\tablename{Table}
+}
+\captionsetup[bi-second]{english}
+
+%	设置页眉
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancypagestyle{preContent}{
+    \fancyhead[L]{\zihao{-5} 物理化学实验}
+    \fancyhead[C]{\zihao{-5} 实验xx\ \ xxxxx}
+    \fancyhead[R]{\zihao{-5} xxxxxxxxxx\ xxx}
+}
+\pagestyle{preContent}
+
+%	设置首页页眉及取消首页页脚 若不需要首页页眉 请注释掉下列内容
+\fancypagestyle{plain}{
+	\fancyhead[L]{\zihao{-5} 物理化学实验}
+	\fancyhead[C]{\zihao{-5} 实验xx\ \ xxxxx}
+	\fancyhead[R]{\zihao{-5} xxxxxxxxxx\ xxx}
+	\cfoot{}
+}
+
+%	设置标题格式
+\titleformat*{\section}{\zihao{4}\sffamily}
+\titleformat*{\subsection}{\zihao{-4}\sffamily}
+\titleformat*{\subsubsection}{\zihao{-4}\sffamily}
+\titlespacing*{\section}{0pt}{10pt}{10pt}
+\titlespacing*{\subsection}{0pt}{10pt}{5pt}
+\titlespacing*{\subsubsection}{0pt}{10pt}{5pt}
+
+%	设置引用格式（ACS格式规范）
+%	请安装压缩包内JabRef-5.1文件
+%	JabRef使用参考：https://blog.csdn.net/weixin_44191286/article/details/85698921
+\usepackage[super,round,comma,compress]{natbib}
+
+%	数学公式增强
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%	设置封面
+\begin{document}
+    % 标题页
+    \begin{titlepage}
+    	% 页眉
+    	\thispagestyle{plain}
+        % 校徽图片
+        \begin{figure}[h]
+            \centering
+            \includegraphics{pku.png}
+        \end{figure}
+        \vspace{24pt}
+        % 标题
+        \centerline{\zihao{-0} \textsf{物理化学实验报告}}
+        \vspace{40pt} % 空行
+        \begin{center}
+            \begin{tabular}{cp{14.1cm}}
+                % 题目
+                \addcell[2]{题目：\ } & \addcell[2]{xxxxxx} \\
+                \cline{2-2}
+            \end{tabular}
+        \end{center}
+        \vspace{20pt} % 空行
+        \begin{center}
+            \doublespacing
+            \begin{tabular}{cp{5cm}}
+                % 姓名
+                \addcell{姓\phantom{空格}名：\ } & \addcell{xxx} \\
+                \cline{2-2}
+                % 学号
+                \addcell{学\phantom{空格}号：\ } & \addcell{xxxxxxxxxx}\\
+                \cline{2-2}
+                % 组别
+                \addcell{组\phantom{空格}别：\ } & \addcell{xx组} \\
+                \cline{2-2}
+                % 实验日期
+                \addcell{实验日期：\ } & \addcell{2020.xx.xx}\\
+                \cline{2-2}
+                % 室温
+                \addcell{室\phantom{空格}温：\ } & \addcell{xxx.xx\ K}\\
+                \cline{2-2}
+                % 大气压强
+                \addcell{大气压强：\ } & \addcell{xxx.xx\ kPa}\\
+                \cline{2-2}
+            \end{tabular}
+            \begin{tabular*}{\textwidth}{c}
+                \\ % 这是空行
+                \\ % 这是空行
+                \\ % 这是空行
+                \\ % 这是空行
+                \hline % 分割线
+            \end{tabular*}
+        \end{center}
+        % 摘要
+        \textsf{摘\ \ 要}\ \ 本实验通过...，利用...，得到了...，比较了...，从而初步了解了...。
+        \\
+        \\
+        % 关键字
+        \textsf{关键词}\ \ xxx；xxx；xxx；xxx
+    \end{titlepage}
+
+    \section{引言}
+	引言部分...
+               
+	\vbox{} % 设置空行
+	     
+    \section{实验部分}
+    	\subsection{仪器和试剂}
+    		仪器和试剂...
+    			
+    	 \subsection{实验内容}
+			\subsubsection{实验内容1}
+				实验内容1...
+			\subsubsection{实验内容2}
+				实验内容2...
+			\subsubsection{实验内容3}
+				实验内容3...
+			\subsubsection{实验内容4}
+				实验内容4...
+			\subsubsection{实验内容5}
+				实验内容5...
+    	
+	\vbox{}  
+	
+	 \section{数据与结果}
+ 		\subsection{实验数据记录及处理}
+ 			\subsubsection{实验内容1}
+ 				实验内容1...
+		 		% 插入图片示例
+		 		 \begin{figure}[h]
+		 			\centering
+		 			\includegraphics[width=0.5\textwidth]{pku.png}
+		 			\bicaption{中文图题}{Caption}
+		 		\end{figure}
+		 	
+		 		xxx如\textbf{表1}所示。
+		 		
+		 		% 插入表格示例
+		 		  \begin{table}[h]
+		 			\centering
+		 			\zihao{5}
+		 			\bicaption{中文表题}{Caption}
+		 			\begin{tabular}{ccccc} 
+		 				% 五列表格为例 改变列数请改变"c"的个数
+		 				\toprule
+		 				一 & 二 & 三 & 四 & \thead[c] {$E_{trans}$ \\ / $ \rm kJ \cdot mol^{-1} $} \\
+		 				%	表格分行示例 不需要请删去
+		 				\midrule
+		 				1 & 1 & 1 & 3 & $-1.01316\times10^{6}$ \\
+		 				2 & 2 & 1 & 7 & \\
+		 				3 & 3 & 1 & 3 & \\
+		 				4 & 4 & 1 & 6 & \\
+		 				5 & 5 & 1 & 1 & \\
+		 				\bottomrule
+		 			\end{tabular}
+		 		\end{table}
+		 		\vbox{}
+ 	
+	 		\subsubsection{实验内容2}
+	 			实验内容2...
+	 		\subsubsection{实验内容3}
+	 			实验内容3...
+	 		\subsubsection{实验内容4}
+	 			实验内容4...
+	 		\subsubsection{实验内容5}
+	 			实验内容5...
+	 			% 公式输入示例
+	 			$$ E_{total}=E_{trans}+E_{rot}+E_{vib}+E_{elec} $$ 
+	 	
+	 			$$ 1\ \ {\rm a.u.}=2625.50 \ \ {\rm kJ \cdot mol^{-1}} $$
+	 			
+	 			$$\Delta E_{total}=E_{total}({\rm nap})-E_{total}{\rm (azu)=-1.4\times10^{2} \ \ kJ \cdot mol^{-1} }$$
+	 	
+	 			% 文献引用实例
+	 			参考值\citealp{dean1992lange} 
+	 			$$\mu=1.66\ \ {\rm D}$$
+	 			实验值\citealp{Bast2009,Konecny2019}
+	 			$$E_{\rm Zn}=5.80 \ \ {\rm eV}\ \ \ \ \ \ \ E_{\rm Cu}=1.39\ \ {\rm eV}$$
+	 		
+	 	\subsection{实验结果及分析}
+			\subsubsection{实验内容1}
+	 			实验内容1...
+ 			
+	\vbox{} 
+ 	
+ 	\section{讨论与结论}
+		\subsection{实验讨论}
+ 			\subsubsection{实验讨论1}
+ 	 			实验讨论1...
+ 	 		\subsubsection{实验讨论2}
+ 	 			实验讨论2...
+ 	 		\subsubsection{实验讨论3}
+ 	 			实验讨论3...
+ 	 
+ 		 \subsection{实验结论}
+ 	 		实验结论...
+
+\vbox{}  
+% 参考文献
+\bibliographystyle{achemso}
+\bibliography{cite}
+
+
+\end{document}
