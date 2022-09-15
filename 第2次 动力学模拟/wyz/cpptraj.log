@@ -1,0 +1,7 @@
+# 10/14/20  21:58:41
+trajin ala12_md4.nc 500 500 
+trajout ala12_lowest.pdb pdb go
+exit
+exit
+exit
+exit

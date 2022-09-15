@@ -1,0 +1,4 @@
+Stage 3 production run of ALA12 at 300K
+&cntrl
+imin=0,irest=1,ntx=5,nstlim=500000,dt=0.002,ntc=2,ntf=2,ntt=3,gamma_ln=1.0,ig=-1,tempi=300.0,temp0=300.0,ntpr=500,ntwx=500,ntb=0,igb=1,cut=999.,rgbmax=999.,ioutfm=1
+/

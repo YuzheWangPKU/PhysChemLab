@@ -1,0 +1,12 @@
+%chk=Cu.chk
+%mem=6MW
+%nproc=1
+# td b3lyp/6-311++g(2d,2p) geom=connectivity
+
+Title Card Required
+
+0 2
+ Cu
+
+ 1
+

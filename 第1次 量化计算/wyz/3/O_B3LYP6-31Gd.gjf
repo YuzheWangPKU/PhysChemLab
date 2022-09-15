@@ -1,0 +1,12 @@
+%chk=O_B3LYP6-31Gd.chk
+%mem=6MW
+%nproc=1
+# opt b3lyp/6-31g(d) geom=connectivity
+
+Title Card Required
+
+0 3
+ O
+
+ 1
+
